@@ -8,7 +8,8 @@ jest.mock('../examples/code-gen', ()=> jest.fn(()=> null));
 
 const prettyHtml = (raw, ...args)=> html(
   String.raw({raw}, ...args),
-  { /* eslint camelcase: off */
+  {
+    /* eslint camelcase: off */
     indent_size: 2,
     wrap_line_length: 70,
     preserve_newlines: false
@@ -47,7 +48,7 @@ describe('loader and plugin', ()=> {
           <title>react-entry-loader - page 1</title>
           <meta
             http-equiv="Content-Security-Policy"
-            content="default-src 'self';"
+            content="default-src 'self'; style-src 'self' 'unsafe-inline'"
           />
           <link href="shared.css" rel="stylesheet"/>
           <script type="text/javascript" src="runtime.js" async=""></script>

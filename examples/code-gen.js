@@ -2,8 +2,8 @@
 import fs from 'fs';
 
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
-import {tomorrow} from 'react-syntax-highlighter/styles/prism';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import {tomorrow} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import {transform} from '@babel/core';
 
 import {getModule, getTemplate} from '../src/code-split';

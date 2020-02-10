@@ -14,7 +14,7 @@ const Html = ({scripts, styles, title})=> (
       <title>{title}</title>
       <meta
         httpEquiv="Content-Security-Policy"
-        content="default-src 'self';"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'"
       />
       <Styles files={styles} />
       <Scripts files={scripts} async />

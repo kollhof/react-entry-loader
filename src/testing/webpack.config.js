@@ -25,7 +25,15 @@ export default {
     runtimeChunk: {name: 'runtime'},
     splitChunks: {
       chunks: 'all',
-      name: 'shared'
+      name: true,
+      cacheGroups: {
+        default: false,
+        shared: {
+          test: /.*/,
+          name: 'shared',
+          chunks: 'all'
+        }
+      }
     }
   }
 };
